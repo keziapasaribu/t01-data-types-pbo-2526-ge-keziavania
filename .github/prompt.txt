@@ -1,0 +1,11 @@
+Nama: Kezia Vania Pasaribu
+NIM: 12S24009
+
+Prompt:
+1. bantu aku memahami soal ini
+2. coba berikan kepada saya sebuah kode yang sederhana, tidak rumit, dan mudah dipahami
+3. kodenya tidak berjalan, bisakah berikan solusinya dalam bentuk paragraf dan kode untuk mengatasi error tersebut?
+4. tetap saja error, kenapa ini ya?
+5. begini hasilnya, coba berikan kode yang bisa menyelesaikan itu
+6. coba kamu berikan code yang sederhana dan yang tidak rumit untuk mengatasi soal ini
+7. 
