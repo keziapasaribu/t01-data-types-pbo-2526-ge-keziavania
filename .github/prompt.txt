@@ -8,4 +8,3 @@ Prompt:
 4. tetap saja error, kenapa ini ya?
 5. begini hasilnya, coba berikan kode yang bisa menyelesaikan itu
 6. coba kamu berikan code yang sederhana dan yang tidak rumit untuk mengatasi soal ini
-7. 

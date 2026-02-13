@@ -3,38 +3,68 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String pilihanSoal;
 
-        int hasil = a + b;
-
-        if (a > 0 && b > 0 && hasil < 0) {
-            System.out.println("OVERFLOW");
-        } else if (a < 0 && b < 0 && hasil >= 0) {
-            System.out.println("OVERFLOW");
+        if (args.length > 0) {
+            pilihanSoal = args[0];
         } else {
-            System.out.println(hasil);
+            System.out.print("Pilih Soal: ");
+            pilihanSoal = sc.next();
         }
 
-        sc.close();
-     }
+        switch (pilihanSoal) {
+            case "Soal1":
+                int a = sc.nextInt();
+                int b = sc.nextInt();
+                int res = a + b;
+                if (((a ^ res) & (b ^ res)) < 0) {
+                    System.out.println("OVERFLOW");
+                } else {
+                    System.out.println(res);
+                }
+                break;
+
+            case "Soal2":
+                double x = sc.nextDouble();
+                double y = sc.nextDouble();
+                float resFloat = (float) x + (float) y;
+                double resDouble = x + y;
+                double selisih = Math.abs((double) resFloat - resDouble);
+                System.out.printf("%.6f\n", selisih);
+                break;
+
+            case "Soal3":
+                int n = sc.nextInt();
+                Integer aObj = n; 
+                Integer bObj = aObj;
+                aObj++; // Ini menciptakan objek baru karena Integer immutable
+                System.out.println("==: " + (aObj == bObj));
+                System.out.println("equals: " + aObj.equals(bObj));
+                break;
+
+            case "Soal4":
+                String s = sc.next();
+                String strA = s;
+                String strB = new String(s);
+                strA = strA + "X";
+                System.out.println("==: " + (strA == strB));
+                System.out.println("equals: " + strA.equals(strB));
+                break;
+
+            case "Soal5":
+                int valInt = Integer.parseInt(sc.next());
+                double valDouble = Double.parseDouble(sc.next());
+                boolean valBool = Boolean.parseBoolean(sc.next());
+                double result = valInt * valDouble;
+                if (!valBool) result *= -1;
+                System.out.printf("%.2f\n", result);
+                break;
+
+            default:
+                System.out.println("Soal tidak ditemukan.");
+                break;
+        }
+        
+        sc.close(); 
+    }
 }
-
-// soal 2
-double x = sc.nextDouble();
-        double y = sc.nextDouble();
-
-        // 2. Jumlahkan menggunakan float
-        float hasilFloat = (float) x + (float) y;
-
-        // 3. Jumlahkan menggunakan double
-        double hasilDouble = x + y;
-
-        // 4. Hitung selisih absolut (selalu positif)
-        double selisih = Math.abs(hasilFloat - hasilDouble);
-
-        // 5. Tampilkan hasil dengan 6 digit di belakang koma
-        System.out.printf("%.6f\n", selisih);
-
-        sc.close();
